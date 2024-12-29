@@ -61,7 +61,7 @@ public class Config extends AbstractOkaeriConfigFile {
 
 	// This doesn't need to be an enumerator, we're reading this value back to an enum from TranslationManager which doesn't rely on this class.
     @LocalizedComment("config.language")
-    private String language = "en";
+    private String language = "ru";
 
 	@LocalizedComment("config.updateCheck")
     private ReleaseChecker.ReleaseCheckerType resolveUpdatesFrom = ReleaseChecker.ReleaseCheckerType.GITHUB;
