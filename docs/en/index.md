@@ -11,7 +11,7 @@ icon: fontawesome/solid/house
 ---
 
 <h1 class="white">  
-    Brewery<span class="neon">X</span>
+    BetterBrewery<span class="neon">X</span>
 </h1>
 
 BreweryX is an actively maintained fork of Brewery which includes many new features, bug fixes and gives support to the inactive plugin!
