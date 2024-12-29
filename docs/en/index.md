@@ -15,6 +15,7 @@ icon: fontawesome/solid/house
 </h1>
 
 BreweryX is an actively maintained fork of Brewery which includes many new features, bug fixes and gives support to the inactive plugin!
+BetterBreweryX, in turn, is a fork of BreweryX, introducing its own changes to it concerning the translation into Russian and the content of the plugin.
 
 This Plugin works with **Spigot**, **Paper**, and **Folia** for 1.21.1 - 1.8.x.
 
