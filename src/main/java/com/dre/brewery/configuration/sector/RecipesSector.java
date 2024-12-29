@@ -33,7 +33,7 @@ public class RecipesSector extends AbstractOkaeriConfigSector<ConfigRecipe> {
 
     ConfigRecipe ex = ConfigRecipe.builder()
 			.enabled(true)
-            .name("Bad Example/Example/Good Example")
+            .name("Плохой пример/Пример/Хороший пример")
             .ingredients(List.of("Bedrock/2", "Spruce_Planks/8", "Bedrock/1", "Brewery:Wheatbeer/2", "ExoticGarden:Grape/3", "ex-item/4"))
             .cookingTime(3)
             .distillRuns(2)
@@ -43,18 +43,18 @@ public class RecipesSector extends AbstractOkaeriConfigSector<ConfigRecipe> {
             .color("DARK_RED")
             .difficulty(3)
             .alcohol(14)
-            .lore(List.of("This is an example brew", "++Just a normal Example", "This text would be on the brew", "+ Smells disgusting", "++ Smells alright", "+++ Smells really good"))
+            .lore(List.of("Это пример напитка", "++Просто обычный пример", "Этот текст будет на напитке", "+ Пахнет отвратительно", "++ Пахнет хорошо", "+++ Пахнет очень хорошо"))
             .serverCommands(List.of("+++ weather clear", "+ weather rain"))
             .playerCommands(List.of("homes"))
-            .drinkMessage("Tastes good")
-            .drinkTitle("Warms you from inside")
+            .drinkMessage("Вкусно")
+            .drinkTitle("Греет изнутри")
             .glint(true)
             .customModelData("556/557/557")
             .effects(List.of("FIRE_RESISTANCE/20", "HEAL/1", "WEAKNESS/2-3/50-60", "POISON/1-0/20-0"))
             .build();
 
     ConfigRecipe wheatbeer = ConfigRecipe.builder()
-            .name("Skunky Wheatbeer/Wheatbeer/Fine Wheatbeer")
+            .name("Гадкое пшеничное пиво/Пшеничное пиво/Хорошее пшеничное пиво")
             .ingredients(List.of("Wheat/3"))
             .cookingTime(8)
             .distillRuns(0)
@@ -63,11 +63,11 @@ public class RecipesSector extends AbstractOkaeriConfigSector<ConfigRecipe> {
             .color("ffb84d")
             .difficulty(1)
             .alcohol(5)
-            .lore(List.of("+++ &8Refreshing"))
+            .lore(List.of("+++ &Освежает"))
             .build();
 
 	ConfigRecipe beer = ConfigRecipe.builder()
-			.name("Skunky Beer/Beer/Fine Beer")
+			.name("Гадкое пиво/Пиво/Хорошее пиво")
 			.ingredients(List.of("Wheat/6"))
 			.cookingTime(8)
 			.distillRuns(0)
@@ -76,11 +76,11 @@ public class RecipesSector extends AbstractOkaeriConfigSector<ConfigRecipe> {
 			.color("ffd333")
 			.difficulty(1)
 			.alcohol(6)
-			.lore(List.of("+++ &8Crisp taste"))
+			.lore(List.of("+++ &8Свежий вкус"))
 			.build();
 
 	ConfigRecipe darkbeer = ConfigRecipe.builder()
-			.name("Skunky Darkbeer/Darkbeer/Fine Darkbeer")
+			.name("Гадкое тёмное пиво/Тёмное пиво/Хорошее тёмное пиво")
 			.ingredients(List.of("Wheat/6"))
 			.cookingTime(8)
 			.distillRuns(3)
@@ -89,11 +89,11 @@ public class RecipesSector extends AbstractOkaeriConfigSector<ConfigRecipe> {
 			.color("650013")
 			.difficulty(2)
 			.alcohol(7)
-			.lore(List.of("+++ &8Roasted taste"))
+			.lore(List.of("+++ &8Вкус жареного"))
 			.build();
 
 	ConfigRecipe wine = ConfigRecipe.builder()
-			.name("Red Wine")
+			.name("Красное вино")
 			.ingredients(List.of("Sweet_Berries/5"))
 			.cookingTime(5)
 			.distillRuns(0)
