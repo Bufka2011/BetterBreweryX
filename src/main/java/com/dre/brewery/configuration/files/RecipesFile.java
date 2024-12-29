@@ -36,24 +36,24 @@ import java.util.Map;
 
 @Header("!!! IMPORTANT: BreweryX configuration files do NOT support external comments! If you add any comments, they will be overwritten !!!")
 @Footer({"",
-	"More recipe ideas:",
-	"Dandelion Liquor",
-	"Beetroot Spirit",
-	"Poppy Liquor: Macum/Grand Poppy",
-	"Bamboo Liquor: Chu Yeh Ching",
-	"Cachaca",
-	"Cognac",
-	"Sake",
-	"Buorbon",
-	"Moonshine",
-	"Different Wines",
-	"Brandy",
-	"Amaretto",
-	"etc. as well as variations like,",
-	"Pumpkin Spice Beer",
-	"Melon Vodka",
+	"Идеи для рецептов:",
+	"Ликёр из одуванчиков",
+	"Свекольный спирт",
+	"Ликёр из мака: Macum/Grand Poppy",
+	"Бамбуковый ликёр: Chu Yeh Ching",
+	"Кашаса",
+	"Коньяк",
+	"Саке",
+	"Бурбон",
+	"Самогон",
+	"Различные вина",
+	"Бренди",
+	"Амаретто",
+	"и т.д., а также вариации, такие как,",
+	"Пиво с тыквенными специями",
+	"Дынная водка",
 	"",
-	"There are a lot of items in Minecraft like Vines, Milk and items added by plugins that would make great ingredients."
+	"В Minecraft есть много предметов, таких как Лианы, Молоко и предметы, добавленные плагинами, которые станут отличными ингредиентами."
 })
 @OkaeriConfigFileOptions("recipes.yml")
 @Setter
