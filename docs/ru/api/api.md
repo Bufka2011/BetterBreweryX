@@ -1,17 +1,17 @@
 
-# Addon API
+# API Аддонов
 
-BreweryX supports addons that can add new features to the plugin.
-This can be new brewing recipes, custom items, or other features.
-This section documents how to create an addon for BreweryX.
+BreweryX поддерживает аддоны, которые могут добавить новые фишки в плагин.
+Это могут быть новые рецепты варки, кастомные предметы, или другие вещи.
+Эта секция рассказывает, как сделать аддон для BreweryX.
 
-## Creating an addon
+## Создание аддона
 
-See our repository [template addons](https://github.com/BreweryTeam/ExampleBreweryAddon)
-for project setup and what dependencies to include.
+Посмотри наш репозиторий [template addons](https://github.com/BreweryTeam/ExampleBreweryAddon)
+для настройки проекта и какие зависимости включить.
 
-After setting up your project, you'll need a main class that extends `BreweryAddon`
-and implements the `onAddonEnable` method.
+После настройки своего проекта, тебе нужно сделать main class, который расширяет `BreweryAddon`
+и реализует `onAddonEnable` метод.
 
 === "Java"
 
@@ -23,17 +23,17 @@ and implements the `onAddonEnable` method.
     public class MyAddon extends BreweryAddon {
         @Override
         public void onAddonEnable() {
-            // Code which is executed when MyAddon is enabled
+            // Код, который выполняется когда MyAddon включён
         }
 
         @Override
         public void onAddonDisable() {
-            // Code which is executed when BreweryX is disabled
+            // Код, который выполняется когда BreweryX выключен
         }
 
         @Override
         public void onBreweryReload() {
-            // Code which is executed when `/breweryx reload` is executed
+            // Код, который выполняется когда команда `/breweryx reload` выполняется
         }
     }
     ```
@@ -46,23 +46,23 @@ and implements the `onAddonEnable` method.
     @AddonInfo(name = "MyAddon", version = "1.0", author = "Jonah")
     class MyAddon : BreweryAddon() {
         override fun onAddonEnable() {
-            // Code which is executed when MyAddon is enabled
+            // Код, который выполняется когда MyAddon включён
         }
 
         override fun onAddonDisable() {
-            // Code which is executed when BreweryX is disabled
+            // Код, который выполняется когда BreweryX выключен
         }
 
         override fun onBreweryReload() {
-            // Code which is executed when `/breweryx reload` is executed
+            // Код, который выполняется когда команда `/breweryx reload` выполняется
         }
     }
     ```
 
-## Addon Commands
+## Команды Аддона
 
-Addon commands should be registered through the `registerCommand` method in the `onAddonEnable` method.
-Addon commands will appear as subcommands for the `/breweryx` command in-game.
+Команды аддона следует регистрировать с помощью метода `registerCommand` в методе `onAddonEnable`.
+Команды аддона будут отображаться в игре как подкоманды для команды `/breweryx`.
 
 === "Java"
 
@@ -70,7 +70,7 @@ Addon commands will appear as subcommands for the `/breweryx` command in-game.
     public class MyCommand implements AddonCommand {
         @Override
         public void execute(BreweryPlugin breweryPlugin, Lang lang, CommandSender sender, String label, String[] args) {
-            sender.sendMessage("Hello, from MyCommand!");
+            sender.sendMessage("Привет от MyCommand!");
         }
 
         @Override
@@ -100,7 +100,7 @@ Addon commands will appear as subcommands for the `/breweryx` command in-game.
     ``` kotlin
     class MyCommand : AddonCommand {
         override fun execute(breweryPlugin: BreweryPlugin, lang: Lang, sender: CommandSender, label: String, args: Array<String>) {
-            sender.sendMessage("Hello, from MyCommand!")
+            sender.sendMessage("Привет от MyCommand!")
         }
 
         override fun tabComplete(breweryPlugin: BreweryPlugin, sender: CommandSender, label: String, args: Array<String>): List<String>? {
@@ -121,11 +121,11 @@ Addon commands will appear as subcommands for the `/breweryx` command in-game.
     }
     ```
 
-## Events in addons
+## События в аддонах
 
-Events in addons should be declared the same way as they are in normal Bukkit plugins.
-The only difference being, is that you must register them through your addons `registerListener`
-method in the `onAddonEnable` method.
+События в аддонах должны объявляться так же, как и в обычных плагинах Bukkit.
+Единственное отличие заключается в том, что вы должны зарегистрировать их через метод `registerListener`
+вашего дополнения в методе `onAddonEnable`.
 
 === "Java"
 
@@ -133,7 +133,7 @@ method in the `onAddonEnable` method.
     public class MyListener implements Listener {
         @EventHandler
         public void onPlayerJoin(PlayerJoinEvent event) {
-            event.getPlayer().sendMessage("Hello, from MyListener!");
+            event.getPlayer().sendMessage("Привет от MyListener!");
         }
     }
 
@@ -149,7 +149,7 @@ method in the `onAddonEnable` method.
     class MyListener : Listener {
         @EventHandler
         fun onPlayerJoin(event: PlayerJoinEvent) {
-            event.player.sendMessage("Hello, from MyListener!")
+            event.player.sendMessage("Привет от MyListener!")
         }
     }
 
@@ -158,12 +158,12 @@ method in the `onAddonEnable` method.
     }
     ```
 
-## Configuration files in addons
+## Конфигурационные файлы в адлдонах
 
-Addons support configuration files using Okaeri config,
-which is a powerful and easy-to-use configuration library.
+Аддоны поддерживают конфигурационные файлы, используя Okaeri config,
+которая представляет собой мощную и простую в использовании библиотеку конфигурации.
 
-Lombok is recommended for Java developers to reduce boilerplate code.
+Lombok рекомендован для Java разработчиков для сокращения шаблонного кода.
 
 === "Java"
 
@@ -171,7 +171,7 @@ Lombok is recommended for Java developers to reduce boilerplate code.
     @OkaeriConfigFile(fileName = "addon-config.yml")
     @Getter @Setter
     public class MyConfig extends AddonConfigFile {
-        public String message = "Hello, from MyConfig!";
+        public String message = "Привет от MyConfig!";
     }
 
     @Override
@@ -187,7 +187,7 @@ Lombok is recommended for Java developers to reduce boilerplate code.
     @OkaeriConfigFile(fileName = "addon-config.yml")
     class MyConfig : AddonConfigFile() {
         @JvmField
-        var message: String = "Hello, from MyConfig!"
+        var message: String = "Привет от MyConfig!"
     }
 
     override fun onAddonEnable() {
@@ -197,7 +197,7 @@ Lombok is recommended for Java developers to reduce boilerplate code.
     ```
 
 
-# External Plugin API
+# Внешний API плагина
 
 Для Java-разработчиков: используйте любой выпущенный JAR-файл локально или, что предпочтительнее, используйте JitPack:
 
@@ -243,7 +243,7 @@ Lombok is recommended for Java developers to reduce boilerplate code.
     }
     ```
 
-!!! warning
+!!! важно
 
     Не забудьте заменить VERSION на версию [доступную на JitPack](https://jitpack.io/#BreweryTeam/BreweryX#releasesLink).
 
