@@ -12,10 +12,11 @@ description: Лучший плагин на варку алкоголя
 ---
 
 <h1 class="white">  
-    Brewery<span class="neon">X</span>
+    BetterBrewery<span class="neon">X</span>
 </h1>
 
 BreweryX это поддерживаемый, активно разрабатываемый плагин, который привносит жизнь в устаревший Brewery.
+BetterBreweryX, в свою очередь, является форком BreweryX, внося в него свои изменения, касающиеся перевода на русский язык и контента плагина.
 
 Плагин работает на **Spigot**, **Paper**, и **Folia** для 1.21.1 - 1.8.x.
 
